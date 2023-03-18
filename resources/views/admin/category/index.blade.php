@@ -25,6 +25,7 @@
                             <th>Image</th>
                             <th>Status</th>
                             <th>Edit</th>
+                            <th>Delete</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -43,7 +44,10 @@
                                     @endif
                                 </td>
                                 <td>
-                                    <a href="" class="btn btn-primary">Edit</a>
+                                    <a href="{{ url('admin/edit-category/'. $item->id) }}" class="btn btn-primary">Edit</a>
+                                </td>
+                                <td>
+                                    <a href="{{ url('admin/delete-category/'. $item->id) }}" class="btn btn-danger">Delete</a>
                                 </td>
                             </tr>
                         @endforeach
