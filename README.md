@@ -10,7 +10,7 @@ The project is a travel blog that is being developed as a final assignment for t
 
 ## Tech Stack:
 
-The application is being developed using the Laravel PHP framework and utilizes several open-source packages. The front-end is built using HTML, CSS, and JavaScript, and utilizes Bootstrap for responsive design. The database is MySQL, and the application is hosted on an Apache web server.
+The application is being developed using the Laravel PHP framework and utilizes several open-source packages. The front-end is built using HTML, CSS, and JavaScript, and utilizes Bootstrap for responsive design. The database is MySQL.
 
 ## Purpose:
 
