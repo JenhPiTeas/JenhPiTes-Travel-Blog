@@ -20,13 +20,13 @@ return new class extends Migration
             $table->string('slug');
             $table->mediumText('description');
 
-            $table->string('yt_iframe');
+            $table->string('yt_iframe')->nullable();
 
             $table->string('meta_title');
-            $table->text('meta_description');
-            $table->text('meta_keywords');
+            $table->text('meta_description')->nullable();
+            $table->text('meta_keywords')->nullable();
 
-            $table->tinyInteger('status');
+            $table->tinyInteger('status')->default('0');
             $table->integer('created_by');
             $table->timestamps();
         });
