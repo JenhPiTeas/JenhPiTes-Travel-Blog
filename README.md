@@ -1,66 +1,90 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# JenhPiTes Travel Blog
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+The project is a travel blog that is being developed as a final assignment for the third year of the second semester in university. The aim of the project is to provide a platform for students to share their travel experiences, stories, and photos with others.
 
-## About Laravel
+## Main Features(Frontend & Dashboard):
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+- User authentication: Users can sign up or log in to access the travel blog.
+- Create posts: Admin can create posts that include text, photos, and videos.
+- Comment and like: Users can interact with posts by leaving comments.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## Tech Stack:
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+The application is being developed using the Laravel PHP framework and utilizes several open-source packages. The front-end is built using HTML, CSS, and JavaScript, and utilizes Bootstrap for responsive design. The database is MySQL, and the application is hosted on an Apache web server.
 
-## Learning Laravel
+## Purpose:
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+The purpose of this project is to provide students with an opportunity to learn about web development and apply their knowledge to develop a travel blog. Through this project, students will gain experience in developing a web application with modern technologies, working in a team, and managing a project from start to finish. Additionally, users will be able to use the travel blog to connect, inspire, and learn from one another's travel experiences.
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+## Table of Contents
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+- [Installation](#installation)
+- [Requirement](#requirement)
+- [Tools](#tools)
 
-## Laravel Sponsors
+## Installation
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+1. Clone the repository.
 
-### Premium Partners
+```
+git clone https://github.com/JenhPiTeas/JenhPiTes-Travel-Blog.git
+```
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
+2. Navigate to the project directory.
 
-## Contributing
+```
+cd [project directory]
+```
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+3. Install the project dependencies.
 
-## Code of Conduct
+```
+composer install
+```
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+4. Copy the `.env.example` file and rename it `.env`.
 
-## Security Vulnerabilities
+```
+cp .env.example .env
+```
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+5. Generate an application key.
 
-## License
+```
+php artisan key:generate
+```
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+6. Edit the `.env` file and add your database credentials.
+
+```
+DB_DATABASE=[your database name]
+DB_USERNAME=[your database username]
+DB_PASSWORD=[your database password]
+```
+
+7. Run the database migrations.
+
+```
+php artisan migrate
+```
+
+8. Start the server.
+
+```
+php artisan serve
+```
+
+9. Run Vite.
+
+```
+npm run dev
+```
+
+## Requirement
+- Laravel v9.52.4
+- PHP v8.2.3
+- Node
+
+## Tools
+- PHPStorm IDE
+- MYSQL Workbench
