@@ -83,8 +83,8 @@ npm run dev
 ## Requirement
 - Laravel v9.52.4
 - PHP v8.2.3
-- Node
-
+- Node v18.14.2
+- npm v9.5.0
 ## Tools
 - PHPStorm IDE
 - MYSQL Workbench
