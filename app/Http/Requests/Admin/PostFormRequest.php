@@ -11,7 +11,7 @@ class PostFormRequest extends FormRequest
      *
      * @return bool
      */
-    public function authorize()
+    public function authorize(): bool
     {
         return true;
     }
@@ -21,9 +21,9 @@ class PostFormRequest extends FormRequest
      *
      * @return array<string, mixed>
      */
-    public function rules()
+    public function rules(): array
     {
-        $rules = [
+        return [
             'category_id' => [
                 'required',
                 'integer',
@@ -60,7 +60,5 @@ class PostFormRequest extends FormRequest
                 'nullable',
             ],
         ];
-
-        return $rules;
     }
 }

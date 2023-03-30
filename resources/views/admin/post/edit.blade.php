@@ -27,7 +27,8 @@
                         <select name="category_id" required class="form-control">
                             <option value="">-- Select Category --</option>
                             @foreach($category as $categoryItem)
-                                <option value="{{ $categoryItem->id }}" {{ $post->category_id == $categoryItem->id ? 'selected' : '' }} >
+                                <option
+                                    value="{{ $categoryItem->id }}" {{ $post->category_id == $categoryItem->id ? 'selected' : '' }} >
                                     {{ $categoryItem->name }}
                                 </option>
                             @endforeach
@@ -62,12 +63,14 @@
 
                     <div class="mb-3">
                         <label for="" class="form-label">Meta Description</label>
-                        <textarea name="meta_description" class="form-control" rows="3"> {{ $post->meta_description }} </textarea>
+                        <textarea name="meta_description" class="form-control"
+                                  rows="3"> {{ $post->meta_description }} </textarea>
                     </div>
 
                     <div class="mb-3">
                         <label for="" class="form-label">Meta Keywords</label>
-                        <textarea name="meta_keywords" class="form-control" rows="3"> {{ $post->meta_keywords }} </textarea>
+                        <textarea name="meta_keywords" class="form-control"
+                                  rows="3"> {{ $post->meta_keywords }} </textarea>
                     </div>
 
                     <h6>Status Mode</h6>

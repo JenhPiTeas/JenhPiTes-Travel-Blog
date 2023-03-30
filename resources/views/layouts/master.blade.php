@@ -24,23 +24,23 @@
 
 <body>
 
-    @include('layouts.inc.admin-navbar')
+@include('layouts.inc.admin-navbar')
 
-    <div id="layoutSidenav">
+<div id="layoutSidenav">
 
-        @include('layouts.inc.admin-sidebar')
+    @include('layouts.inc.admin-sidebar')
 
-        <div id="layoutSidenav_content">
-            <main>
-                @yield('content')
-            </main>
-            @include('layouts.inc.admin-footer')
-        </div>
-
+    <div id="layoutSidenav_content">
+        <main>
+            @yield('content')
+        </main>
+        @include('layouts.inc.admin-footer')
     </div>
 
-    <script src="{{ asset('assets/js/bootstrap.bundle.min.js') }}" crossorigin="anonymous"></script>
-    <script src="{{ asset('assets/js/scripts.js') }}" crossorigin="anonymous"></script>
+</div>
+
+<script src="{{ asset('assets/js/bootstrap.bundle.min.js') }}" crossorigin="anonymous"></script>
+<script src="{{ asset('assets/js/scripts.js') }}" crossorigin="anonymous"></script>
 
 </body>
 

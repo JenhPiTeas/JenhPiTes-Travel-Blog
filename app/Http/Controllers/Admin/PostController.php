@@ -36,7 +36,7 @@ class PostController extends Controller
         $post->meta_title = $data['meta_title'];
         $post->meta_description = $data['meta_description'];
         $post->meta_keywords = $data['meta_keywords'];
-        $post->status = $request->status == true ? '1' : '0';
+        $post->status = $request->status ? '1' : '0';
         $post->created_by = Auth::user()->id;
         $post->save();
 

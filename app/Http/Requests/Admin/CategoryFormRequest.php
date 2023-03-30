@@ -12,7 +12,7 @@ class CategoryFormRequest extends FormRequest
      *
      * @return bool
      */
-    public function authorize()
+    public function authorize(): bool
     {
         return true;
     }
@@ -22,9 +22,9 @@ class CategoryFormRequest extends FormRequest
      *
      * @return array<string, mixed>
      */
-    public function rules()
+    public function rules(): array
     {
-        $rule = [
+        return [
             'name'=> [
                 'required',
                 'string',
@@ -64,7 +64,5 @@ class CategoryFormRequest extends FormRequest
                 'nullable',
             ],
         ];
-
-        return $rule;
     }
 }

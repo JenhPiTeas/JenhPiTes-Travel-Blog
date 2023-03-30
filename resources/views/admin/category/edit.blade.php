@@ -18,7 +18,8 @@
                     @endforeach
                 @endif
 
-                <form action="{{ url('admin/update-category/'.$category->id) }}" method="POST" enctype="multipart/form-data">
+                <form action="{{ url('admin/update-category/'.$category->id) }}" method="POST"
+                      enctype="multipart/form-data">
                     @csrf
                     @method('PUT')
 
@@ -46,18 +47,21 @@
                     </div>
                     <div class="mb-3">
                         <label for="" class="form-label">Meta Description</label>
-                        <textarea name="meta_description" class="form-control" rows="3">{{ $category->meta_description }}</textarea>
+                        <textarea name="meta_description" class="form-control"
+                                  rows="3">{{ $category->meta_description }}</textarea>
                     </div>
                     <div class="mb-3">
                         <label for="" class="form-label">Meta Keywords</label>
-                        <textarea name="meta_keywords" class="form-control" rows="3">{{ $category->meta_keywords }}</textarea>
+                        <textarea name="meta_keywords" class="form-control"
+                                  rows="3">{{ $category->meta_keywords }}</textarea>
                     </div>
 
                     <h6>Status Mode</h6>
                     <div class="row">
                         <div class="col-md-3 mb-3">
                             <label>Navbar Status</label>
-                            <input type="checkbox" name="navbar_status" {{ $category->navbar_status == 1 ? 'checked' : '' }}>
+                            <input type="checkbox"
+                                   name="navbar_status" {{ $category->navbar_status == 1 ? 'checked' : '' }}>
                         </div>
                         <div class="col-md-3 mb-3">
                             <label>Status</label>
