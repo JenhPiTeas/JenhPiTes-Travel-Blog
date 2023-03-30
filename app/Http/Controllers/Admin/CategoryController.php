@@ -52,12 +52,14 @@ class CategoryController extends Controller
         return redirect('admin/category')->with('message', 'Category added successfully!');
     }
 
-    public function edit($category_id) {
+    public function edit($category_id)
+    {
         $category = Category::find($category_id);
         return view('admin.category.edit', compact('category'));
     }
 
-    public function update(CategoryFormRequest $request, $category_id) {
+    public function update(CategoryFormRequest $request, $category_id)
+    {
         $data = $request->validated();
 
         $category = Category::find($category_id);
@@ -91,7 +93,8 @@ class CategoryController extends Controller
         return redirect('admin/category')->with('message', 'Category updated successfully!');
     }
 
-    public function destroy($category_id) {
+    public function destroy($category_id)
+    {
 
         $category = Category::find($category_id);
 
@@ -104,8 +107,7 @@ class CategoryController extends Controller
 
             $category->delete();
             return redirect('admin/category')->with('message', 'Category deleted successfully!');
-        }
-        else {
+        } else {
             return redirect('admin/category')->with('message', 'Category not found!');
         }
     }

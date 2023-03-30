@@ -47,7 +47,8 @@
 
                     <div class="mb-3">
                         <label for="" class="form-label">Description</label>
-                        <textarea name="description" class="form-control" rows="3">{{ $post->description }}</textarea>
+                        <textarea name="description" id="summernote" class="form-control"
+                                  rows="3">{{ $post->description }}</textarea>
                     </div>
 
                     <div class="mb-3">
