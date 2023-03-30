@@ -23,7 +23,8 @@
 
                     <div class="mb-3">
                         <label for="" class="form-label">Category</label>
-                        <select name="category_id" class="form-control">
+                        <select name="category_id" required class="form-control">
+                            <option value="">-- Select Category --</option>
                             @foreach($category as $categoryItem)
                                 <option value="{{ $categoryItem->id }}">{{ $categoryItem->name }}</option>
                             @endforeach
@@ -42,7 +43,7 @@
 
                     <div class="mb-3">
                         <label for="" class="form-label">Description</label>
-                        <textarea name="description" class="form-control" rows="3"></textarea>
+                        <textarea name="description" id="summernote" class="form-control" rows="3"></textarea>
                     </div>
 
                     <div class="mb-3">
