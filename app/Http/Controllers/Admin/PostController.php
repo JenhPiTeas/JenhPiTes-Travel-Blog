@@ -8,6 +8,7 @@ use App\Models\Category;
 use App\Models\Post;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Str;
 
 class PostController extends Controller
 {
@@ -30,7 +31,7 @@ class PostController extends Controller
         $post = new Post;
         $post->category_id = $data['category_id'];
         $post->name = $data['name'];
-        $post->slug = $data['slug'];
+        $post->slug = Str::slug($data['slug']);
         $post->description = $data['description'];
         $post->yt_iframe = $data['yt_iframe'];
         $post->meta_title = $data['meta_title'];
@@ -55,7 +56,7 @@ class PostController extends Controller
         $post = Post::find($post_id);
         $post->category_id = $data['category_id'];
         $post->name = $data['name'];
-        $post->slug = $data['slug'];
+        $post->slug = Str::slug($data['slug']);
         $post->description = $data['description'];
         $post->yt_iframe = $data['yt_iframe'];
         $post->meta_title = $data['meta_title'];
