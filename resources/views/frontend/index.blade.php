@@ -19,7 +19,7 @@
     {{--        </div>--}}
     {{--    </div>--}}
 
-    <div class="container">
+    <div class="container-fluid">
 
         <h5 class="mb-3"><i class="fas fa-binoculars fa-fw fa-lg text-danger me-1"></i> Explore by cities</h5>
 

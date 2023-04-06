@@ -1,7 +1,7 @@
 <!-- Navbar -->
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <!-- Container wrapper -->
-    <div class="container">
+    <div class="container-fluid">
         <!-- Navbar brand -->
         <a class="navbar-brand me-3" href="#">
             <i class="fab fa-atlassian fa-fw fa-lg text-danger"></i>
