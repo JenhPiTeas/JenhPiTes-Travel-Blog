@@ -21,11 +21,13 @@
 
     <div class="container-fluid">
 
-        <h5 class="mb-3"><i class="fas fa-binoculars fa-fw fa-lg text-danger me-1"></i> Explore by cities</h5>
+        <h5 class="mb-3">
+            <i class="fas fa-binoculars fa-fw fa-lg text-danger me-1"></i> Explore by cities
+        </h5>
 
-        <div class="row">
+        <div class="row g-2">
             @foreach(\App\Models\Category::where('navbar_status', 1)->where('status', 1)->get() as $category)
-                <div class="col-3 mb-4">
+                <div class="col-3 g-2">
                     <div class="rounded-3 bg-image" style="height: 150px;">
                         <img src="{{ asset('uploads/category/'.$category->image) }}" class="img-fluid"/>
                         <a href="#!">
