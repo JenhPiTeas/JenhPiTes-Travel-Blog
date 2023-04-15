@@ -20,7 +20,7 @@ class FrontendController extends Controller
 
         if ($category) {
             $posts = Post::where('category_id', $category->id)->where('status', 1)->get();
-            return view('frontend.post.index');
+            return view('frontend.post.index', compact('posts', 'category'));
         } else {
             return redirect('/');
         }
