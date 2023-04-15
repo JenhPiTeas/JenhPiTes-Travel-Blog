@@ -13,7 +13,7 @@
                 <div class="col-3 g-2">
                     <div class="rounded-3 bg-image" style="height: 150px;">
                         <img src="{{ asset('uploads/category/'.$category->image) }}" class="img-fluid"/>
-                        <a href="#!">
+                        <a href="{{ url('tutorial/'.$category->slug) }}">
                             <div
                                 class="card-topic mask text-light d-flex justify-content-center flex-column text-center">
                                 <h5 class=" card-title">{{ $category->name }}</h5>
