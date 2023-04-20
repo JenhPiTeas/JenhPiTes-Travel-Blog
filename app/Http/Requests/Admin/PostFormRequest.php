@@ -42,7 +42,7 @@ class PostFormRequest extends FormRequest
             ],
             'yt_iframe' => [
                 'nullable',
-                'string',
+                'mimes:jpeg,jpg,png',
             ],
             'meta_title' => [
                 'nullable',

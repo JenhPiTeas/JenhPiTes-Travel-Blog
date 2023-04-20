@@ -8,6 +8,7 @@ use App\Models\Category;
 use App\Models\Post;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\File;
 use Illuminate\Support\Str;
 
 class PostController extends Controller
@@ -33,7 +34,14 @@ class PostController extends Controller
         $post->name = $data['name'];
         $post->slug = Str::slug($data['slug']);
         $post->description = $data['description'];
-        $post->yt_iframe = $data['yt_iframe'];
+
+        if ($request->hasFile('yt_iframe')) {
+            $file = $request->file('yt_iframe');
+            $filename = time() . '.' . $file->getClientOriginalExtension();
+            $file->move('uploads/post/', $filename);
+            $post->yt_iframe = $filename;
+        }
+
         $post->meta_title = $data['meta_title'];
         $post->meta_description = $data['meta_description'];
         $post->meta_keywords = $data['meta_keywords'];
@@ -58,7 +66,20 @@ class PostController extends Controller
         $post->name = $data['name'];
         $post->slug = Str::slug($data['slug']);
         $post->description = $data['description'];
-        $post->yt_iframe = $data['yt_iframe'];
+
+        if ($request->hasFile('yt_iframe')) {
+
+            $destination = 'uploads/post/' . $post->yt_iframe;
+            if (File::exists($destination)) {
+                File::delete($destination);
+            }
+
+            $file = $request->file('yt_iframe');
+            $filename = time() . '.' . $file->getClientOriginalExtension();
+            $file->move('uploads/post/', $filename);
+            $post->yt_iframe = $filename;
+        }
+
         $post->meta_title = $data['meta_title'];
         $post->meta_description = $data['meta_description'];
         $post->meta_keywords = $data['meta_keywords'];

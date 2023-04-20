@@ -19,6 +19,7 @@ return new class extends Migration
             $table->string('name');
             $table->string('slug');
             $table->mediumText('description');
+            $table->string('image');
 
             $table->string('yt_iframe')->nullable();
 
