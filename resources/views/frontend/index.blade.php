@@ -1,5 +1,9 @@
 @extends('layouts.app')
 
+@section('title', "JenhPiTes")
+@section('meta_description', "JenhPiTes")
+@section('meta_keywords', "JenhPiTes")
+
 @section('content')
 
     <div class="container-fluid">
