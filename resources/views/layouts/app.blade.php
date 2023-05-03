@@ -7,7 +7,11 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>@yield('title')</title>
+    <meta name="description" content="@yield('meta_description', 'Default Description')">
+    <meta name="keywords" content="@yield('meta_keywords', 'Default Keywords')">
+
+    <meta name="author" content="JenhPiTes">
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
