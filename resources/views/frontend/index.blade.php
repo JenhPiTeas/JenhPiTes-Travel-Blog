@@ -28,6 +28,18 @@
             @endforeach
         </div>
 
+        <h5 class="mb-3 mt-5">
+            <i class="fas fa-star fa-fw fa-lg text-danger me-1"></i> Explore in <span class="text-danger fw-bold">Phnom Penh</span>
+        </h5>
+
+        <h5 class="mb-3 mt-5">
+            <i class="fas fa-star fa-fw fa-lg text-danger me-1"></i> Explore in <span class="text-danger fw-bold">Siem Reap</span>
+        </h5>
+
+        <h5 class="mb-3 mt-5">
+            <i class="fas fa-star fa-fw fa-lg text-danger me-1"></i> Explore in <span class="text-danger fw-bold">Kampot</span>
+        </h5>
+
     </div>
 
 @endsection
