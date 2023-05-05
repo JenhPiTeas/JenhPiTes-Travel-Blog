@@ -32,12 +32,36 @@
             <i class="fas fa-star fa-fw fa-lg text-danger me-1"></i> Explore in <span class="text-danger fw-bold">Phnom Penh</span>
         </h5>
 
+        <div class="bg-danger">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+
+                        <div class="owl-carousel category-carousel owl-theme">
+
+                            <div class="item">
+                                <div class="card">
+                                    <img src="" alt="Image">
+                                    <div class="card-body">
+                                        <h4>Category</h4>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <h5 class="mb-3 mt-5">
             <i class="fas fa-star fa-fw fa-lg text-danger me-1"></i> Explore in <span class="text-danger fw-bold">Siem Reap</span>
         </h5>
 
         <h5 class="mb-3 mt-5">
-            <i class="fas fa-star fa-fw fa-lg text-danger me-1"></i> Explore in <span class="text-danger fw-bold">Kampot</span>
+            <i class="fas fa-star fa-fw fa-lg text-danger me-1"></i> Explore in <span
+                class="text-danger fw-bold">Kampot</span>
         </h5>
 
     </div>
