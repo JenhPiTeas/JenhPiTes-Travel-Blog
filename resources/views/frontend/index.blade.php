@@ -32,25 +32,29 @@
             <i class="fas fa-star fa-fw fa-lg text-danger me-1"></i> Explore in <span class="text-danger fw-bold">Phnom Penh</span>
         </h5>
 
-        <div class="bg-danger">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12">
-
-                        <div class="owl-carousel category-carousel owl-theme">
-
-                            <div class="item">
-                                <div class="card">
-                                    <img src="" alt="Image">
-                                    <div class="card-body">
-                                        <h4>Category</h4>
+        <div class="owl-carousel owl-theme bg-danger">
+            <div class="item">
+                <div class="row g-2">
+                    @php $posts = \App\Models\Post::where('status', 1)->where('category_id', 21)->get(); @endphp
+                    @if(count($posts) > 0)
+                        @foreach($posts as $post)
+                            <div class="col-4 g-2">
+                                <a href="{{ url('tutorial/'.$post->category->slug.'/'.$post->slug) }}">
+                                    <div class="card" style="height: 300px; overflow: hidden;">
+                                        <img src="{{ asset('uploads/post/'.$post->yt_iframe) }}" class="card-img-top" alt="..."
+                                             height="200px">
+                                        <div class="card-body px-3">
+                                            <div class="text-muted mb-2">
+                                                <i class="fas fa-map-marker-alt fa-fw"></i>
+                                                <span>{{ $post->category->name }}</span>
+                                            </div>
+                                            <h5 class="card-text text-truncate">{{ $post->name }}</h5>
+                                        </div>
                                     </div>
-                                </div>
+                                </a>
                             </div>
-
-                        </div>
-
-                    </div>
+                        @endforeach
+                    @endif
                 </div>
             </div>
         </div>

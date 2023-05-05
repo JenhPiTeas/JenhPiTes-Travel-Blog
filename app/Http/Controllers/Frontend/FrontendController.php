@@ -11,7 +11,8 @@ class FrontendController extends Controller
 {
     public function index()
     {
-        return view('frontend.index');
+        $all_posts = Post::where('status', 1)->get();
+        return view('frontend.index', compact('all_posts'));
     }
 
     public function viewCategoryPost(string $category_slug)
