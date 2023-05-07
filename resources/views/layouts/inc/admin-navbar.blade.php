@@ -1,7 +1,7 @@
 <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark d-flex justify-content-between">
 
     <!-- Navbar Brand-->
-    <a class="navbar-brand ps-3" href="#">
+    <a class="navbar-brand ps-3" href="{{ url('/') }}">
         <img src="{{ asset('img.png') }}" alt="logo" width="35" height="34" class="rounded-2">
     </a>
 

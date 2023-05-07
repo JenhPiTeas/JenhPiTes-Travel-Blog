@@ -17,7 +17,7 @@
                 <div class="col-3 g-2">
                     <div class="rounded-3 bg-image" style="height: 150px;">
                         <img src="{{ asset('uploads/category/'.$category->image) }}" class="img-fluid"/>
-                        <a href="{{ url('tutorial/'.$category->slug) }}">
+                        <a href="{{ url('category/'.$category->slug) }}">
                             <div
                                 class="card-topic mask text-light d-flex justify-content-center flex-column text-center">
                                 <h5 class=" card-title">{{ $category->name }}</h5>
@@ -38,7 +38,7 @@
                     @php $posts = \App\Models\Post::where('status', 1)->where('category_id', 21)->get(); @endphp
                     @if(count($posts) > 0)
                         @foreach($posts as $post)
-                            <a href="{{ url('tutorial/'.$post->category->slug.'/'.$post->slug) }}">
+                            <a href="{{ url('category/'.$post->category->slug.'/'.$post->slug) }}">
                                 <div class="card" style="height: 300px; overflow: hidden;">
                                     <img src="{{ asset('uploads/post/'.$post->yt_iframe) }}" class="card-img-top" alt="..."
                                          height="200px">
@@ -67,7 +67,7 @@
                     @php $posts = \App\Models\Post::where('status', 1)->where('category_id', 17)->get(); @endphp
                     @if(count($posts) > 0)
                         @foreach($posts as $post)
-                            <a href="{{ url('tutorial/'.$post->category->slug.'/'.$post->slug) }}">
+                            <a href="{{ url('category/'.$post->category->slug.'/'.$post->slug) }}">
                                 <div class="card" style="height: 300px; overflow: hidden;">
                                     <img src="{{ asset('uploads/post/'.$post->yt_iframe) }}" class="card-img-top" alt="..."
                                          height="200px">
@@ -97,7 +97,7 @@
                     @php $posts = \App\Models\Post::where('status', 1)->where('category_id', 18)->get(); @endphp
                     @if(count($posts) > 0)
                         @foreach($posts as $post)
-                            <a href="{{ url('tutorial/'.$post->category->slug.'/'.$post->slug) }}">
+                            <a href="{{ url('category/'.$post->category->slug.'/'.$post->slug) }}">
                                 <div class="card" style="height: 300px; overflow: hidden;">
                                     <img src="{{ asset('uploads/post/'.$post->yt_iframe) }}" class="card-img-top" alt="..."
                                          height="200px">
