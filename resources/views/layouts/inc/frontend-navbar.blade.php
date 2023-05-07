@@ -53,12 +53,12 @@
 <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
     <div class="container-fluid">
         <!-- Navbar brand -->
-        <a class="navbar-brand me-3" href="#">
+        <a class="navbar-brand me-3" href=" {{ url('/') }} ">
             <i class="fab fa-atlassian fa-fw fa-lg text-danger"></i>
         </a>
 
         <a href="{{ url('admin/dashboard') }}">
-            <button type="button" class="btn btn-outline-danger text-danger px-3" href="">
+            <button type="button" class="btn btn-outline-danger text-danger px-3" href= "{{ url('admin/dashboard') }}">
                 DASHBOARD
             </button>
         </a>

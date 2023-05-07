@@ -1,7 +1,7 @@
 <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark d-flex justify-content-between">
 
     <!-- Navbar Brand-->
-    <a class="navbar-brand ps-3" href="#">
+    <a class="navbar-brand ps-3" href="{{ url('/') }}">
         <img src="{{ asset('img.png') }}" alt="logo" width="35" height="34" class="rounded-2">
     </a>
 
@@ -18,7 +18,13 @@
                     <li>
                         <hr class="dropdown-divider"/>
                     </li>
-                    <li><a class="dropdown-item" href="#">Logout</a></li>
+                    <li><a class="dropdown-item" href=" {{ route('logout') }} " onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                            Logout
+                        </a>
+                    </li>
+                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                        @csrf
+                    </form>
                 </ul>
             </li>
         </ul>

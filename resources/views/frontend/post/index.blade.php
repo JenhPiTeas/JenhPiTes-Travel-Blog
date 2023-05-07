@@ -37,7 +37,7 @@
             <div class="row g-2">
                 @forelse($posts as $post)
                     <div class="col-2 g-2">
-                        <a href=" {{ url('tutorial/'.$category->slug.'/'.$post->slug) }}">
+                        <a href=" {{ url('category/'.$category->slug.'/'.$post->slug) }}">
                             <div class="card" style="height: 300px; overflow: hidden;">
                                 <img src="{{ asset('uploads/post/'.$post->yt_iframe) }}" class="card-img-top" alt="..."
                                      height="200px">
