@@ -31,12 +31,36 @@ class CommentController extends Controller
                     'comment_body' => $request->comment_body,
                 ]);
                 return redirect()->back()->with('message', 'Comment added successfully.');
-            }
-            else {
+            } else {
                 return redirect()->back()->with('message', 'Post not found.');
             }
         } else {
             return redirect('/login')->with('message', 'Please login first.');
+        }
+    }
+
+    public function destroy(Request $request)
+    {
+        if (Auth::check()) {
+            $comment = Comment::where('id', $request->comment_id)->where('user_id', Auth::user()->id)->first();
+
+            if ($comment) {
+                $comment->delete();
+                return response()->json([
+                    'status' => 200,
+                    'message' => 'Comment deleted successfully.'
+                ]);
+            } else {
+                return response()->json([
+                    'status' => 500,
+                    'message' => 'Something went wrong.'
+                ]);
+            }
+        } else {
+            return response()->json([
+                'status' => 401,
+                'message' => 'Please login first.'
+            ]);
         }
     }
 }

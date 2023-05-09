@@ -43,13 +43,14 @@
                             </div>
 
                             @forelse($post->comments as $comment)
-                                <div class="card card-body shadow-sm mt-3">
+                                <div class="comment-container card card-body shadow-sm mt-3">
                                     <div class="detail-area">
                                         <h6 class="user-name mb-1">
                                             @if ($comment->user)
                                                 {{ $comment->user->name }}
                                             @endif
-                                            <small class="ms-3 text-primary">{!! $comment->created_at->diffForHumans() !!}</small>
+                                            <small
+                                                class="ms-3 text-primary">{!! $comment->created_at->diffForHumans() !!}</small>
                                         </h6>
                                         <p class="user-comment mb-1">
                                             {!!  $comment->comment_body !!}
@@ -58,8 +59,7 @@
 
                                     @if(auth()->check() && auth()->user()->id == $comment->user_id)
                                         <div>
-                                            <a href="" class="btn btn-sm btn-primary me-2">Edit</a>
-                                            <a href="" class="btn btn-sm btn-danger">Delete</a>
+                                            <button type="button" value="{{ $comment->id }}" class="deleteComment btn btn-sm btn-danger">Delete</button>
                                         </div>
                                     @endif
 
@@ -75,4 +75,47 @@
             </div>
         </div>
     </div>
+
+@endsection
+
+@section('scripts')
+
+    <script>
+
+        $(document).ready(function () {
+
+            $.ajaxSetup({
+                headers: {
+                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content'),
+                }
+            });
+
+            $(document).on('click', '.deleteComment' , function () {
+
+                if (confirm('Are you sure you want to delete this comment?')) {
+
+                    var thisClicked = $(this);
+                    var commentId = thisClicked.val();
+
+                    $.ajax({
+                        type: 'POST',
+                        url: "/delete-comment",
+                        data: {
+                            'comment_id': commentId,
+                        },
+                        success: function (res) {
+                            if (res.status === 200) {
+                                thisClicked.closest('.comment-container').remove();
+                            } else {
+                                alert(res.message);
+                            }
+                        }
+                    });
+                }
+
+            });
+        });
+
+    </script>
+
 @endsection
