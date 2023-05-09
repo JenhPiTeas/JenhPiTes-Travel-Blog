@@ -12,6 +12,7 @@ Route::get('category/{category_slug}', [App\Http\Controllers\Frontend\FrontendCo
 Route::get('category/{category_slug}/{post_slug}', [App\Http\Controllers\Frontend\FrontendController::class, 'viewPost']);
 
 Route::post('comments', [App\Http\Controllers\Frontend\CommentController::class, 'store']);
+Route::post('delete-comment', [App\Http\Controllers\Frontend\CommentController::class, 'destroy']);
 
 Route::prefix('admin')->middleware(['auth', 'is_admin'])->group(function () {
 
