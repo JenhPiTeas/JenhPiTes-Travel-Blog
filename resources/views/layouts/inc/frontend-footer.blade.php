@@ -11,21 +11,6 @@
         <!-- Right -->
         <div>
             <a href="" class="me-4 link-secondary">
-                <i class="fab fa-facebook-f"></i>
-            </a>
-            <a href="" class="me-4 link-secondary">
-                <i class="fab fa-twitter"></i>
-            </a>
-            <a href="" class="me-4 link-secondary">
-                <i class="fab fa-google"></i>
-            </a>
-            <a href="" class="me-4 link-secondary">
-                <i class="fab fa-instagram"></i>
-            </a>
-            <a href="" class="me-4 link-secondary">
-                <i class="fab fa-linkedin"></i>
-            </a>
-            <a href="" class="me-4 link-secondary">
                 <i class="fab fa-github"></i>
             </a>
         </div>
@@ -42,11 +27,10 @@
                 <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
                     <!-- Content -->
                     <h6 class="text-uppercase fw-bold mb-4">
-                        <i class="fas fa-gem me-3 text-secondary"></i>Company name
+                        <i class="fab fa-atlassian me-2 text-secondary"></i>JenhPiTes
                     </h6>
                     <p>
-                        Here you can use rows and columns to organize your footer content. Lorem ipsum
-                        dolor sit amet, consectetur adipisicing elit.
+                        JenhPiTes its purpose is to explore the eateries, travel destinations, tips for packing, and guidance to support you in picking where to head next.
                     </p>
                 </div>
                 <!-- Grid column -->
@@ -55,19 +39,19 @@
                 <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
                     <!-- Links -->
                     <h6 class="text-uppercase fw-bold mb-4">
-                        Products
+                        Team Members
                     </h6>
                     <p>
-                        <a href="#!" class="text-reset">Angular</a>
+                        <a href="#!" class="text-reset">Tan Bunchhay</a>
                     </p>
                     <p>
-                        <a href="#!" class="text-reset">React</a>
+                        <a href="#!" class="text-reset">Nuth Vireak</a>
                     </p>
                     <p>
-                        <a href="#!" class="text-reset">Vue</a>
+                        <a href="#!" class="text-reset">Pok Hengly</a>
                     </p>
                     <p>
-                        <a href="#!" class="text-reset">Laravel</a>
+                        <a href="#!" class="text-reset">Than Limphengeang</a>
                     </p>
                 </div>
                 <!-- Grid column -->
@@ -76,19 +60,16 @@
                 <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
                     <!-- Links -->
                     <h6 class="text-uppercase fw-bold mb-4">
-                        Useful links
+                        Team Members [Cont.]
                     </h6>
                     <p>
-                        <a href="#!" class="text-reset">Pricing</a>
+                        <a href="#!" class="text-reset">Neang Soytry</a>
                     </p>
                     <p>
-                        <a href="#!" class="text-reset">Settings</a>
+                        <a href="#!" class="text-reset">Dum Sileang</a>
                     </p>
                     <p>
-                        <a href="#!" class="text-reset">Orders</a>
-                    </p>
-                    <p>
-                        <a href="#!" class="text-reset">Help</a>
+                        <a href="#!" class="text-reset">Non Menghung</a>
                     </p>
                 </div>
                 <!-- Grid column -->
@@ -97,13 +78,8 @@
                 <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
                     <!-- Links -->
                     <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
-                    <p><i class="fas fa-home me-3 text-secondary"></i> New York, NY 10012, US</p>
-                    <p>
-                        <i class="fas fa-envelope me-3 text-secondary"></i>
-                        info@example.com
-                    </p>
-                    <p><i class="fas fa-phone me-3 text-secondary"></i> + 01 234 567 88</p>
-                    <p><i class="fas fa-print me-3 text-secondary"></i> + 01 234 567 89</p>
+                    <p><i class="fas fa-home me-3 text-secondary"></i>ITE, Faculty of Engineering, RUPP</p>
+                    <p><i class="fas fa-phone me-3 text-secondary"></i> 099 747 687</p>
                 </div>
                 <!-- Grid column -->
             </div>
@@ -114,8 +90,8 @@
 
     <!-- Copyright -->
     <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.025);">
-        © 2021 Copyright:
-        <a class="text-reset fw-bold" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+        © 2023 Copyright:
+        <a class="text-reset" href="">JenhPiTes</a>
     </div>
     <!-- Copyright -->
 </footer>
